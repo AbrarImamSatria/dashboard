@@ -13,7 +13,12 @@ const pathMap: Record<string, string> = {
 
   "menara": "Menara",
   "peta": "Detail Peta",
-  "statik": "Detail Statistik Menara"
+  "statik": "Detail Statistik Menara",
+
+  "pariwisata": "Pariwisata",
+  "distribusi-wisata": " Detail Distribusi Wisata",
+  "jenis-wisata": "Detail Jenis Wisata",
+  "jumlah-pengunjung": "Detail Jumlah Pengunjung",
 };
 
 const Breadcrumb = () => {

@@ -10,12 +10,12 @@ const MenuASN = () => {
     {
       icon: <FaChartPie size={24} />,
       label: "Distribusi ASN",
-      path: "kepegawaian/distribusi-asn",
+      path: "/dashboard/kepegawaian/distribusi-asn",
     },
     {
       icon: <FaUsers size={24} />,
       label: "Jenis Pegawai",
-      path: "kepegawaian/jenis-pegawai",
+      path: "/dashboard/kepegawaian/jenis-pegawai",
     },
   ];
 

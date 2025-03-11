@@ -1,7 +1,7 @@
-"use client"; 
+"use client";
 import React from "react";
-import MenuASN from "@/components/kepegawaian/MenuAsn";
-import CombinedDashboard from "@/components/kepegawaian/CombinedDashboard";
+import MenuASN from "@/components/kepegawaian/home/MenuAsn";
+import CombinedDashboard from "@/components/kepegawaian/home/CombinedDashboard";
 
 export default function ASNPage() {
   return (

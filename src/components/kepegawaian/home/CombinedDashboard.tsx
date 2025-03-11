@@ -89,7 +89,7 @@ const CombinedDashboard = () => {
         dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pppk.laki_laki,
     },
   ];
-  
+
   // Data untuk Dashboard Cards dari API
   const cardData = [
     {
@@ -115,12 +115,13 @@ const CombinedDashboard = () => {
   ];
 
   // Calculate max value for Y axis in gender chart
-  const genderYMax = Math.max(
-    dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pns.perempuan,
-    dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pns.laki_laki,
-    dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pppk.perempuan,
-    dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pppk.laki_laki
-  ) * 1.2;
+  const genderYMax =
+    Math.max(
+      dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pns.perempuan,
+      dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pns.laki_laki,
+      dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pppk.perempuan,
+      dashboardData.distribusi_asn_berdasarkan_jenis_kelamin.pppk.laki_laki
+    ) * 1.2;
 
   return (
     <div className="flex flex-col gap-8 p-4 max-w-6xl mx-auto">
@@ -130,17 +131,17 @@ const CombinedDashboard = () => {
       {/* Baris kedua: PieChart dan BarChart */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <PieChartCard data={formattedPieData} colors={COLORS} />
-        <BarChartCard 
-          data={barData} 
-          title="Perbandingan Kebutuhan dan Aktual ASN" 
+        <BarChartCard
+          data={barData}
+          title="Perbandingan Kebutuhan dan Aktual ASN"
           yMax={Math.ceil(dashboardData.kebutuhan_asn / 1000) * 1000}
           ticks={[0, 2500, 5000, 7500, 10000]}
         />
       </div>
 
       {/* Baris ketiga: Gender Distribution */}
-      <GenderDistributionCard 
-        data={genderData} 
+      <GenderDistributionCard
+        data={genderData}
         genderData={dashboardData.distribusi_asn_berdasarkan_jenis_kelamin}
         yMax={genderYMax}
         ticks={[0, 500, 1000, 1500, 2000]}
